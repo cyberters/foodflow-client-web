@@ -1,13 +1,80 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Lexend-Bold';
+    src: url('./Assets/Fonts/Lexend-Bold.ttf');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+    font-family: 'Lexend-Light';
+    src: url('./Assets/Fonts/Lexend-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Lexend-Regular';
+    src: url('./Assets/Fonts/Lexend-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lexend-Bold';
+}
+
+span, p, div {
+    font-family: 'Lexend-Regular';
+}
+
+small {
+    font-family: 'Lexend-Light';
+}
+
+td {
+  text-align: center;
+}
+
+th {
+  font-size: .75rem;
+  padding: .45rem;
+  border: 1px solid #9ca3af;
+  background-color: #FEF3E2;
+}
+
+td {
+  font-size: .95rem;
+  padding: .65rem;
+  border: 1px solid #9ca3af;
+  background-color: #FEF3E2;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3f4f6; /* Tailwind gray-100 */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #9ca3af; /* Tailwind gray-400 */
+  border-radius: 9999px;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #9ca3af #f3f4f6;
 }
