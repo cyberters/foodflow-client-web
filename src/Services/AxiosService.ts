@@ -1,7 +1,10 @@
 import axios from "axios";
 
+const LOCAL_URL = `http://localhost:5179`
+const PROD_URL = `https://foodflowapi-h9bngtcucacsddc2.polandcentral-01.azurewebsites.net`
+
 const AxiosService = axios.create({
-    baseURL: `http://localhost:5179/api`,
+    baseURL: `${PROD_URL}/api`,
     withCredentials: true,
     headers: {
         'Content-Type': 'application/json'
