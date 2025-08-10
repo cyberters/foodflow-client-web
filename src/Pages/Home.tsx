@@ -18,7 +18,7 @@ const Home: React.FC = () => {
     return (
         <MainLayout>
             <PageLayout>
-                <div className="grid grid-cols-2 gap-8 py-16 px-7 h-[70vh]">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-8 lg:py-16 px-3 lg:px-7 lg:h-[70vh]">
                     <div className="flex">
                         <div className='flex flex-col space-y-5 my-auto'>
                             <h4 className='text-xl bg-brand-warm px-3 py-2 rounded-md me-auto animate-bounce-slow'>Hello!</h4>
@@ -36,9 +36,9 @@ const Home: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='relative'>
-                        <img src={Illustration001} alt="Girl with Shopping Bag and Logo" srcSet="" className='absolute left-40 h-[60vh] animate-slide-right-slow z-20'/>
-                        <img src={ShoppingFamily} alt="Shopping Family" srcSet="" className='absolute -left-60 -top-10 h-[40vh] rounded-lg animate-slide-down-slow border border-solid border-black'/>
+                    <div className='lg:relative'>
+                        <img src={Illustration001} alt="Girl with Shopping Bag and Logo" srcSet="" className='hidden lg:absolute lg:left-40 h-[20vh] lg:h-[60vh] animate-slide-right-slow z-20'/>
+                        <img src={ShoppingFamily} alt="Shopping Family" srcSet="" className='lg:absolute lg:-left-60 lg:-top-10 lg:h-[40vh] rounded-lg animate-slide-down-slow border border-solid border-black'/>
                     </div>
                 </div>
                 <div id="about-us">
@@ -57,11 +57,11 @@ const Home: React.FC = () => {
                             background={true}/>
                     </CardsBox>
                 </div>
-                <div className="flex py-16">
+                <div className="flex lg:py-16 py-12">
                     <img
                         src={Illustration002}
                         alt="How it works?"
-                        className="mx-auto h-[70vh] animate-wiggle-rotate"
+                        className="mx-auto lg:h-[70vh] animate-wiggle-rotate"
                     />
                 </div>
                 <CardsBox>
@@ -84,7 +84,7 @@ const Home: React.FC = () => {
                         <div className="col-span-1">
                             <img src={Cooking} alt="Cooking" srcSet="" className='rounded-lg animate-slide-down-slow border border-solid border-black'/>
                         </div>
-                        <div className="col-span-2 flex flex-col">
+                        <div className="col-span-2 flex flex-col space-y-3">
                             <CardItem intro="O nas"
                                 header="Przewracamy wiarę w samodzielne gotowanie!"
                                 desc="Nie wymyślamy koła na nowo — ale w świecie zdominowanym przez „ASAP”, diety pudełkowe i gotowce,
@@ -97,9 +97,9 @@ const Home: React.FC = () => {
                         </div>
                     </CardsBox>
                 </div>
-                <div className="py-8">
+                {/* <div className="py-8">
                     <Newsletter/>
-                </div>
+                </div> */}
                 <FooterPage/>
             </PageLayout>
         </MainLayout>

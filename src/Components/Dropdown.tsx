@@ -49,7 +49,7 @@ const Dropdown: React.FC = () => {
   }
 
   return (
-    <div ref={ref} className="flex flex-col space-y-2 px-7">
+    <div ref={ref} className="flex flex-col space-y-2 px-3 lg:px-7">
       <small className="text-gray-600">Wybierz pytanie</small>
       {faqItems.map(({ question, answer }, index) => (
         <div
