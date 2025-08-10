@@ -7,6 +7,7 @@ import AxiosService from '../Services/AxiosService'
 import AlertBadge from '../Components/AlertBadge'
 import foodFlow001 from '../Assets/Images/food-flow001.png'
 import foodFlow002 from '../Assets/Images/food-flow002.png'
+import { useNavigate } from 'react-router-dom'
 
 interface NotificationProps {
     isVisible: boolean
@@ -16,6 +17,8 @@ interface NotificationProps {
 
 const LoginPage: React.FC = () => {
     const [notification, setNotification] = useState<NotificationProps>()
+
+    const navigate = useNavigate()
 
     const onSubmit: SubmitHandler<LoginFormInput> = async (data) => {
         await AxiosService.post(
@@ -38,7 +41,7 @@ const LoginPage: React.FC = () => {
                 message: "Logowanie poprawne"
             })
             setTimeout(() => {
-                window.location.replace('/dashboard');
+                navigate('/dashboard')
             }, 3000);
         }).catch((e) => {
             setNotification({
