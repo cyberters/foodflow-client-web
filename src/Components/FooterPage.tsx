@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const FooterPage: React.FC = () => {
   return (
     <footer className="border border-black border-solid rounded-md px-4 py-3">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8 lg:divide-x divide-y divide-dashed divide-brand-warm">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8 lg:divide-x divide-y lg:divide-y-0 divide-dashed divide-brand-warm">
         <div className="lg:pr-6">
           <h4 className="text-2xl font-bold">food.flow</h4>
           <p className="mt-2 text-sm w-3/5">

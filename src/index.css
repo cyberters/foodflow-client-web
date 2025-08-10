@@ -60,6 +60,14 @@ td {
   background-color: #FEF3E2;
 }
 
+#liquid {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }

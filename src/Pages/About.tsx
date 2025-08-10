@@ -11,14 +11,13 @@ const About: React.FC = () => {
             <PageLayout>
                 <div className='flex-grow pb-8'>
                     <div className="grid grid-cols-6 gap-8 py-8">
-                        <div className="col-span-2">
+                        <div className="col-span-6 lg:col-span-2 lg:px-4">
                             <CardItem intro='Trochę o nas' 
                                 header='...poznajmy się!' 
                                 desc='Nie od razu Rzym zbudowano — tak samo każdy wielki projekt zaczyna się od małego zespołu. Food.flow to inicjatywa duetu pasjonatów: jedzenia i dobrej organizacji. Z tej mieszanki narodził się pomysł, który ma szansę odmienić rynek zakupów spożywczych w Polsce (a może nawet dalej).' background={false}/>
                         </div>
-                        <div className="col-span-4"></div>
                     </div>
-                    <CardsBox>
+                    {/* <CardsBox>
                         <CardItem intro='CEO / pomysłodawca' header='Dominik Hofman' desc='Twórca projektu food.flow. Programista z 5-letnim stażem, zaczynał od stron internetowych, teraz rozwija się w obszarze AI/ML. Dodatkowo pasjonat fotografii i grafiki, więc nie tylko kładzie nacisk na aspekty techniczne projektu, ale także dba o pozytywny odbiór. Świeżo upieczony pan Magister na Uniwersytecie Ekonomicznym we Wroclawiu.'
                         background={true}/>
                         <CardItem intro='Researcher' header='Maria Kuszyńska' desc='Twórca projektu food.flow. Programista z 5-letnim stażem, zaczynał od stron internetowych, teraz rozwija się w obszarze AI/ML. Dodatkowo pasjonat fotografii i grafiki, więc nie tylko kładzie nacisk na aspekty techniczne projektu, ale także dba o pozytywny odbiór. Świeżo upieczony pan Magister na Uniwersytecie Ekonomicznym we Wroclawiu.'
@@ -31,7 +30,7 @@ const About: React.FC = () => {
                         <img src={Cooking} alt="Cooking" srcSet="" className='rounded-lg border border-solid border-black'/>
                         <img src={Cooking} alt="Cooking" srcSet="" className='rounded-lg border border-solid border-black'/>
                         <img src={Cooking} alt="Cooking" srcSet="" className='rounded-lg border border-dashed border-black'/>
-                    </CardsBox>
+                    </CardsBox> */}
                 </div>
             </PageLayout>
         </MainLayout>

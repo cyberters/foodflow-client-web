@@ -18,7 +18,7 @@ const Home: React.FC = () => {
     return (
         <MainLayout>
             <PageLayout>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-8 lg:py-16 px-3 lg:px-7 lg:h-[70vh]">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-8 lg:py-16 px-3 lg:px-4 lg:h-[70vh]">
                     <div className="flex">
                         <div className='flex flex-col space-y-5 my-auto'>
                             <h4 className='text-xl bg-brand-warm px-3 py-2 rounded-md me-auto animate-bounce-slow'>Hello!</h4>
@@ -37,7 +37,7 @@ const Home: React.FC = () => {
                         </div>
                     </div>
                     <div className='lg:relative'>
-                        <img src={Illustration001} alt="Girl with Shopping Bag and Logo" srcSet="" className='hidden lg:absolute lg:left-40 h-[20vh] lg:h-[60vh] animate-slide-right-slow z-20'/>
+                        <img src={Illustration001} alt="Girl with Shopping Bag and Logo" srcSet="" className='hidden lg:block lg:absolute lg:left-40 h-[20vh] lg:h-[60vh] animate-slide-right-slow z-20'/>
                         <img src={ShoppingFamily} alt="Shopping Family" srcSet="" className='lg:absolute lg:-left-60 lg:-top-10 lg:h-[40vh] rounded-lg animate-slide-down-slow border border-solid border-black'/>
                     </div>
                 </div>
@@ -65,15 +65,15 @@ const Home: React.FC = () => {
                     />
                 </div>
                 <CardsBox>
-                    <CardItem intro="Przepłacasz za zakupy?"
+                    <CardItem intro="My nadajemy ton, Ty dopisujesz smak"
                         header="Inteligentne planowanie zakupów"
                         desc="Twórz listy na podstawie planowanych posiłków, unikając zbędnych zakupów i dublowania produktów."
                         background={true}/>
-                    <CardItem intro="Przepłacasz za zakupy?"
+                    <CardItem intro="Kontrolowana improwizacja"
                         header="Oszczędność czasu"
                         desc="Zawsze wiesz, co kupić — koniec z błądzeniem po sklepie i wracaniem po zapomniane składniki."
                         background={true}/>
-                    <CardItem intro="Przepłacasz za zakupy?"
+                    <CardItem intro="W Twoim rytmie!"
                         header="Spersonalizowane rekomendacje"
                         desc="Aplikacja uczy się Twoich nawyków i podpowiada produkty oraz przepisy dopasowane do Ciebie i Twojej rodziny."
                         background={true}/>
@@ -85,21 +85,22 @@ const Home: React.FC = () => {
                             <img src={Cooking} alt="Cooking" srcSet="" className='rounded-lg animate-slide-down-slow border border-solid border-black'/>
                         </div>
                         <div className="col-span-2 flex flex-col space-y-3">
-                            <CardItem intro="O nas"
+                            <CardItem intro="A komu to potrzebne?"
                                 header="Przewracamy wiarę w samodzielne gotowanie!"
-                                desc="Nie wymyślamy koła na nowo — ale w świecie zdominowanym przez „ASAP”, diety pudełkowe i gotowce,
+                                desc="Nie wymyślamy koła na nowo, ale w świecie zdominowanym przez „ASAP”, diety pudełkowe i gotowce,
                                 przypominamy, że gotowanie w domu wciąż ma sens. I potrafi sprawiać radość.
-                                Z nami planowanie zakupów staje się proste, a codzienne gotowanie – mniej stresujące i bardziej satysfakcjonujące.
+                                Z nami planowanie zakupów staje się proste, a codzienne gotowanie mniej stresujące i bardziej satysfakcjonujące.
                                 Pomagamy Ci lepiej organizować listy, ograniczać marnowanie jedzenia i na nowo zakochać się w domowych posiłkach.
                                 Bo gotowanie to nie obowiązek. To styl życia, który warto odzyskać."
-                                background={false}/>
+                                background={false}
+                                border={false}/>
                             <Dropdown/>
                         </div>
                     </CardsBox>
                 </div>
-                {/* <div className="py-8">
+                <div className="py-8">
                     <Newsletter/>
-                </div> */}
+                </div>
                 <FooterPage/>
             </PageLayout>
         </MainLayout>

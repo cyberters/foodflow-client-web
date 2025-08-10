@@ -19,9 +19,9 @@ const faqItems = [
       "Tak, umożliwiamy współdzielenie list zakupów w czasie rzeczywistym, dzięki czemu cała rodzina może mieć dostęp do tych samych planów i aktualizacji."
   },
   {
-    question: "Czy aplikacja działa offline?",
+    question: "W czym food.flow jest lepsze od ChataGPT?",
     answer:
-      "Tak, większość funkcji działa również bez dostępu do internetu. Synchronizacja nastąpi automatycznie, gdy tylko urządzenie ponownie połączy się z siecią."
+      "Nasza aplikacja powstaje we współpracy z doświadczonymi dietetykami i ekspertami ds. żywienia, którzy z pasją i precyzją tworzą kompleksową, profesjonalną bazę wiedzy. To właśnie ona stanowi fundament działania aplikacji, zapewniając użytkownikom dostęp do rzetelnych, aktualnych i praktycznych informacji, które wspierają zdrowe i świadome wybory żywieniowe. Podczas, gdy ChatGPT gromadzi dane o wszystkim i o niczym, my chcemy się doskonalić w tym jednym obszarze, jakim jest zdrowe żywienie!"
   },
   {
     question: "Jak mogę zgłosić sugestię lub problem?",
@@ -49,7 +49,7 @@ const Dropdown: React.FC = () => {
   }
 
   return (
-    <div ref={ref} className="flex flex-col space-y-2 px-3 lg:px-7">
+    <div ref={ref} className="flex flex-col space-y-2">
       <small className="text-gray-600">Wybierz pytanie</small>
       {faqItems.map(({ question, answer }, index) => (
         <div
@@ -81,10 +81,9 @@ const Dropdown: React.FC = () => {
               opacity: openIndex === index ? 1 : 0,
               overflow: 'hidden',
               transition: 'max-height 0.4s ease, opacity 0.4s ease',
-              width: '60%',
             }}
           >
-            <p className="text-gray-700">{answer}</p>
+            <p className="text-gray-700 lg:w-3/5">{answer}</p>
           </div>
         </div>
       ))}

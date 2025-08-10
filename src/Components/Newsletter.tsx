@@ -3,50 +3,26 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
 
 const Newsletter: React.FC = () => {
-  const [email, setEmail] = useState('')
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log("Zapisano e-mail:", email)
-    setEmail('')
-  }
-
   return (
-    <div className="grid grid-cols-3 gap-8 bg-gradient-to-r from-brand-normal to-brand-light rounded-md px-8 py-7">
-      <div className="col-span-2 flex flex-col space-y-6">
-        <FontAwesomeIcon icon={faClock} className="h-8 me-auto" />
-        <h4 className="text-3xl mb-auto">Nad czym teraz pracujemy?</h4>
-        
-      </div>
-      <div className="col-span-1 flex flex-col space-y-6 items-center">
-        <FontAwesomeIcon icon={faNewspaper} className="h-8" />
-        <h4 className="text-3xl font-bold">Masz minutę? Zbudujmy to razem!</h4>
-
-        <p className="leading-relaxed">
-          Tworzymy aplikację, która ma ułatwiać codzienne planowanie zakupów i przywracać radość z domowego gotowania. <br />
-          Budujemy ją z myślą o Tobie — dlatego Twoje zdanie naprawdę się liczy. <br />
-          Masz pomysł, co można ulepszyć? Coś nie działa, jak powinno? <br />
-          A może po prostu chcesz dać znać, że gotowanie znów zaczęło sprawiać Ci frajdę? <br />
-          <strong>Podziel się swoją opinią lub zostaw e-mail — damy znać, gdy aplikacja będzie gotowa!</strong>
-        </p>
-
-        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 w-full justify-center">
-          <input
-            type="email"
-            placeholder="Twój adres e-mail"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            className="px-4 py-2 rounded-md text-brand-normal w-full"
-          />
-          <button
-            type="submit"
-            className="bg-white text-brand-normal font-semibold px-6 py-2 rounded-md hover:bg-brand-light transition"
+    <div className="flex bg-gradient-to-r from-brand-normal to-brand-light rounded-md px-4 py-3">
+      <div
+          id="liquid"
+          className="w-full px-4 py-3 rounded-md bg-white/20 backdrop-blur-md border border-white/30 shadow-lg mx-auto text-white flex flex-col space-y-6 mx-auto"
+        >
+          <div className="flex flex-col space-y-2">
+            <FontAwesomeIcon icon={faClock} className="h-4 lg:h-6 mx-auto" />
+            <h4 className="text-xl lg:text-2xl mx-auto text-center">Poznaj naszą melodię postępów i nuty inspiracji!</h4>
+          </div>
+          <p className='lg:w-2/5 mx-auto text-center'>Zapraszamy Cię do wyjątkowej podróży przez świat naszych działań, gdzie każdy krok to nowa nuta, a każda ciekawostka to inspirująca melodia.
+Śledź z nami rozwój projektu i zanurz się w rytmie innowacji, które tworzymy z pasją i zaangażowaniem.
+Razem komponujemy przyszłość, a Ty możesz być częścią tej harmonii!</p>
+          <a
+            href={`https://www.linkedin.com/company/food-flow-ai`}
+            className={`bg-primary text-black border border-solid border-black transition-all px-3 py-2 rounded-md mx-auto`}
           >
-            Zapisz się
-          </button>
-        </form>
-      </div>
+            <span>Dołącz do nas na LinkedIn!</span>
+        </a>
+      </div>  
     </div>
   )
 }
