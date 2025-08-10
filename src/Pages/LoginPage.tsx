@@ -41,7 +41,7 @@ const LoginPage: React.FC = () => {
                 message: "Logowanie poprawne"
             })
             setTimeout(() => {
-                navigate('/dashboard')
+                navigate('/dashboard/')
             }, 3000);
         }).catch((e) => {
             setNotification({
