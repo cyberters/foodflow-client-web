@@ -53,17 +53,17 @@ const LoginPage: React.FC = () => {
         <MainLayout>
             <PageLayout>
                 <div className='flex-grow py-5'>
-                    <div className="grid grid-cols-3 gap-8">
-                        <div className='flex'>
-                            <img src={foodFlow001} alt="" srcSet="" className='h-[375px] w-auto mx-auto my-auto'/>
+                    <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div className='col-span-1 flex order-2'>
+                            <img src={foodFlow001} alt="" srcSet="" className='w-full mx-auto my-auto'/>
                         </div>
-                        <div className='flex flex-col items-center space-y-3'>
+                        <div className='order-1 lg:order-2 col-span-2 lg:col-span-1 flex flex-col items-center space-y-3'>
                             {notification?.isVisible && <AlertBadge label={notification.message} 
                             className={`border ${notification.isError ? `bg-red-100 border-red-400 text-red-700` : `bg-green-100 border-green-400 text-green-700`} px-2 py-1 rounded-md`}/>}
                             <LoginForm onSubmit={onSubmit}/>
                         </div>
-                        <div className='flex'>
-                            <img src={foodFlow002} alt="" srcSet="" className='h-[375px] w-auto mx-auto my-auto'/>
+                        <div className='col-span-1 flex order-2 lg:order-3'>
+                            <img src={foodFlow002} alt="" srcSet="" className='w-full mx-auto my-auto'/>
                         </div>
                     </div>
                 </div>

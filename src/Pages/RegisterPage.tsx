@@ -33,13 +33,13 @@ const RegisterPage: React.FC = () => {
         <MainLayout>
             <PageLayout>
                 <div className='flex-grow py-5'>
-                    <div className="grid grid-cols-3 gap-8">
-                        <div className='flex'>
-                            <img src={foodFlow001} alt="" srcSet="" className='h-[375px] w-auto mx-auto my-auto'/>
+                    <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div className='col-span-1 flex order-2'>
+                            <img src={foodFlow001} alt="" srcSet="" className='w-full mx-auto my-auto'/>
                         </div>
-                        <div className='flex items-center'><RegisterForm onSubmit={onSubmit}/></div>
-                        <div className='flex'>
-                            <img src={foodFlow002} alt="" srcSet="" className='h-[375px] w-auto mx-auto my-auto'/>
+                        <div className='order-1 lg:order-2 col-span-2 lg:col-span-1 flex flex-col items-center space-y-3'><RegisterForm onSubmit={onSubmit}/></div>
+                        <div className='col-span-1 flex order-2 lg:order-3'>
+                            <img src={foodFlow002} alt="" srcSet="" className='w-full w-auto mx-auto my-auto'/>
                         </div>
                     </div>
                 </div>

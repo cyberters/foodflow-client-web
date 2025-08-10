@@ -36,7 +36,7 @@ const RegisterForm: React.FC<OnSubmitProps> = ({ onSubmit }) => {
   const remaining = Math.max(MIN_LENGTH_PASS - password.length, 0);
 
   return (
-    <div className="max-w-sm w-full mx-auto px-4 py-3 border border-black border-solid rounded-md space-y-6 flex flex-col">
+    <div className="w-full mx-auto px-4 py-3 border border-black border-solid rounded-md space-y-6 flex flex-col">
       <div className="flex flex-col space-y-2">
         <FontAwesomeIcon icon={faUserPlus} className='text-brand-warm h-6 me-auto'/>
         <h2 className="text-2xl text-center me-auto">Rejestracja</h2>
