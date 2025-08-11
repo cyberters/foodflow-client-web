@@ -40,12 +40,12 @@ const CreateProfile: React.FC = () => {
     }
 
     return (
-        <div className="flex-grow space-y-4">
+        <div className="flex-grow space-y-4 h-full">
             <CardHeader title="Stwórz swój profil" subtitle="Profil">
                 <FontAwesomeIcon icon={faUser} className="me-auto h-8 text-brand-warm" />
             </CardHeader>
             <div className="grid grid-cols-5 gap-4">
-                <section className="col-span-3 bg-brand-warm/10 px-3 py-2 rounded-md mb-auto">
+                <section className="col-span-5 lg:col-span-3 bg-brand-warm/10 px-3 py-2 rounded-md mb-auto">
                     <CreateUserProfileForm
                         ActiveMetrics={activeMetrics}
                         Genders={genders}
@@ -53,15 +53,21 @@ const CreateProfile: React.FC = () => {
                         onSubmit={onSubmit}
                     />
                 </section>
-                <section className="col-span-2">
+                <section className="col-span-5 lg:col-span-2">
                     <ListBox>
                         <ListBoxItem label="Instrukcja"/>
-                        <div className="flex flex-col space-y-3 pt-2 pb-2">
-                            <h3 className="text-lg">Złap kulinarny rytm i jedz tak, jak lubisz</h3>
-                            <span className="w-4/5">Uzupełnij swój profil, a my zadbamy o odpowiednią liczbę kalorii i pyszne pomysły na każdy dzień. <br />
-Twój styl życia, Twoje potrzeby, Twój food.flow.</span>
-                            <img src={foodFlow004} alt="" srcSet="" className="w-[15vw]"/>
-                        </div>
+                            <div className="flex flex-col space-y-3 pt-2 pb-2 overflow-x-hidden">
+                                <h3 className="text-lg">Złap kulinarny rytm i jedz tak, jak lubisz</h3>
+                                <span className="text-sm lg:text-md w-4/5">Uzupełnij swój profil, a my zadbamy o odpowiednią liczbę kalorii i pyszne pomysły na każdy dzień. <br />
+    Twój styl życia, Twoje potrzeby, Twój food.flow.</span>
+                                <div className="relative w-full h-[20vw] overflow-hidden">
+                                    <img
+                                        src={foodFlow004}
+                                        alt=""
+                                        className="absolute top-0 left-0 w-[20vw] animate-slide-left-to-right"
+                                    />
+                                </div>
+                            </div>
                     </ListBox>
                 </section>
             </div>

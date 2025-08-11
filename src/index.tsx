@@ -51,6 +51,10 @@ const router = createBrowserRouter([
         index: true
       },
       {
+        path: `create-menu`,
+        element: <CreateFamily/>
+      },
+      {
         path: `create-family`,
         element: <CreateFamily/>
       },

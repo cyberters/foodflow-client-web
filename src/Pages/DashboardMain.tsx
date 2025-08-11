@@ -9,6 +9,7 @@ import useAuthUser from "../Hooks/useAuthUser"
 import foodFlow002 from '../Assets/Images/food-flow002.png'
 import MainButton from "../Components/MainButton"
 import NavbarLink from "../Components/NavbarLink"
+import AutoSlider from "../Components/AutoSlider"
 
 const DashboardMain: React.FC = () => {
     const { userData, loading: loadingUserDetails, error: errorUserDetails } = useAuthUser()
@@ -19,11 +20,17 @@ const DashboardMain: React.FC = () => {
             </CardHeader>
             {userData?.userProfile ? <>
                 <ListBox>
-                    <ListBoxItem label="Zaproponuj jadłospis">
-                        <div>test</div>
+                    <ListBoxItem label="Nie masz pomysłu co ugotować?">
+                        <div className="flex flex-col space-y-1 pt-1 pb-3">
+                            <h6>Planowanie zostaw nam!</h6>
+                            <span className="text-sm">test</span>
+                        </div>
+                        <AutoSlider/>
+                        <div className="py-2"></div>
+                        <NavbarLink href="/sign-in" label="Zaczynamy!" />
                     </ListBoxItem>
                 </ListBox>
-                <ListBox>
+                {/* <ListBox>
                     <ListBoxItem label="Propozycje dnia">
                         <div>test</div>
                     </ListBoxItem>
@@ -33,7 +40,7 @@ const DashboardMain: React.FC = () => {
                     <ListBoxItem label="Twoje jadłospisy">
                         <div>test</div>
                     </ListBoxItem>
-                </ListBox>
+                </ListBox> */}
             </> : <ListBox>
                     <ListBoxItem label="Utwórz profil">
                         <div className="grid grid-cols-3 gap-4 pb-1">

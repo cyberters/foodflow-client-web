@@ -32,8 +32,8 @@ const Dashboard: React.FC = () => {
         <MainLayout>
             <DashboardLayout>
                 <div className="grid grid-cols-9 gap-4 md:gap-8 flex-grow h-full">
-                    <div className="col-span-9 md:col-span-2 flex flex-col md:h-full order-2 md:order-1">
-                        <div className="flex flex-col space-y-4">
+                    <div className="col-span-9 md:col-span-2 flex flex-col h-full order-2 md:order-1">
+                        <div className="flex flex-col space-y-4 mt-auto">
                             <nav className="bg-brand-warm rounded-md px-4 py-3">
                                 <div className="flex items-center justify-between">
                                     <div className="flex flex-col space-y-1">
@@ -83,7 +83,7 @@ const Dashboard: React.FC = () => {
                                 </div>
                             </CardSection>
                         </div>
-                        <div className="hidden border border-black border-solid bg-primary rounded-md px-4 py-3 md:flex flex-col gap-4">
+                        <div className="hidden border border-black border-solid bg-primary rounded-md px-4 py-3 md:flex flex-col gap-4 h-full">
                             <CardHeader subtitle="Twoje gospodarstwa domowe">
                                 <FontAwesomeIcon icon={faPeopleGroup} className="me-auto h-8 text-brand-warm"/>
                             </CardHeader>
@@ -130,7 +130,7 @@ const Dashboard: React.FC = () => {
                             <Footer></Footer>
                         </div>
                     </div>
-                    <div className="order-1 md:order-2 col-span-9 md:col-span-7 border border-black border-solid bg-primary rounded-md px-4 py-3 flex flex-col gap-4 flex-grow h-auto overflow-y-scroll">
+                    <div className="order-1 md:order-2 col-span-9 md:col-span-7 border border-black border-solid bg-primary rounded-md px-4 py-3 flex flex-col gap-4 flex-grow overflow-y-scroll h-full">
                         <Breadcrumbs />
                         <Outlet/>
                     </div>

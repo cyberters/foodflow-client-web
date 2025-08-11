@@ -68,6 +68,24 @@ td {
   );
 }
 
+@keyframes slideLeftToRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(400%);
+  }
+}
+
+.animate-slide-left-to-right {
+  animation: slideLeftToRight 10s linear infinite;
+}
+
+.animate-slide-x {
+  animation: slideX 2s ease-in-out infinite;
+}
+
+
 ::-webkit-scrollbar {
   width: 8px;
 }
