@@ -34,10 +34,6 @@ const router = createBrowserRouter([
     element: <About/>
   },
   {
-    path: '/family',
-    element: <Family/>
-  },
-  {
     path: '/demo',
     element: <Demo/>
   },
@@ -53,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: `create-menu`,
         element: <CreateFamily/>
+      },
+      {
+        path: 'families',
+        element: <Family/>
       },
       {
         path: `create-family`,

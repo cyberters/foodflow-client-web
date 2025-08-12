@@ -2,20 +2,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import CardHeader from "../Components/CardHeader"
 import CardSection from "../Components/CardSection"
 import useAuthUser from "../Hooks/useAuthUser"
-import { faFaceSmileWink, faGhost, faRocket, faUserEdit } from "@fortawesome/free-solid-svg-icons"
+import { faFaceSmileWink, faGhost, faRocket, faUserDoctor, faUserEdit } from "@fortawesome/free-solid-svg-icons"
 import MainButton from "../Components/MainButton"
 import ListBox from "../Components/ListBox"
 import ListBoxItem from "../Components/ListBoxItem"
-import User from "../Assets/Images/User.jpg";
+import User from "../Assets/Images/UserExample.jpg";
+import AnimateBounceHead from "../Components/AnimateBounceHead"
 
 const UserProfileDetails: React.FC = () => {
     const { userData, loading, error } = useAuthUser()
 
     return (
         <>
-            {userData?.userProfile ? <CardHeader title="Panel użytkownika" subtitle="Uzupełnij swoje dane">
+            {userData?.userProfile ? <CardHeader title="Panel użytkownika" subtitle={userData?.userProfile ? `Krótko o Tobie` : `Uzupełnij swoje dane`}>
                     <FontAwesomeIcon icon={faUserEdit} className="me-auto h-8 text-brand-warm"/>
-                </CardHeader> : <CardHeader title="Witaj w food.flow!" subtitle={userData?.userProfile ? `Hello` : `Uzupełnij swoje dane`}>
+                </CardHeader> : <CardHeader title="Witaj w food.flow!" subtitle={userData?.userProfile ? `Krótko o Tobie` : `Uzupełnij swoje dane`}>
                     <FontAwesomeIcon icon={faFaceSmileWink} className="me-auto h-8 text-brand-warm"/>
                 </CardHeader>}
                 {!userData?.userProfile ? <div className="flex flex-col space-y-2">
@@ -56,11 +57,13 @@ const UserProfileDetails: React.FC = () => {
                 </ListBox> 
                 </div> : 
                 <div className="grid grid-cols-5 gap-4">
-                    <div className="col-span-5 lg:col-span-2 flex flex-col space-y-4">
-                        {/* <div
-                            className="w-36 h-36 rounded-full border border-black border-solid bg-center bg-cover"
+                    <div className="col-span-5 lg:col-span-1 flex justify-center">
+                        <div
+                            className="w-[27vh] h-[27vh] rounded-full border border-black bg-center bg-cover"
                             style={{ backgroundImage: `url(${User})` }}
-                        />   */}
+                        />
+                    </div>
+                    <div className="col-span-5 lg:col-span-2 flex flex-col space-y-4">
                         <ListBox>
                             <ListBoxItem label="Twoje imię" value={userData.userProfile.userFirstName}/>
                             <ListBoxItem label="Wiek" value={userData.userProfile.userAge}/>
@@ -71,11 +74,10 @@ const UserProfileDetails: React.FC = () => {
                             <ListBoxItem label="Preferowana dieta" value={`${userData.userProfile.diet.dietName}`}/>
                         </ListBox>    
                     </div>
-                    <div className="col-span-5 lg:col-span-3 flex flex-col space-y-4">
-                        {/* <div
-                            className="w-32 h-32 rounded-full border border-black border-solid bg-center bg-cover"
-                            style={{ backgroundImage: `url(${User})` }}
-                        />  */}
+                    <div className="col-span-5 lg:col-span-2 flex flex-col space-y-2">
+                        <AnimateBounceHead label="Porada dietetyka">
+                            <FontAwesomeIcon icon={faUserDoctor}/>
+                        </AnimateBounceHead>
                         <ListBox>
                             <ListBoxItem label="Twoje aktywność fizyczna" value={userData.userProfile.activeMetric.activeMetricDescription}/>
                             <ListBoxItem label="Twoja dieta" value={userData.userProfile.diet.dietDescription}/>

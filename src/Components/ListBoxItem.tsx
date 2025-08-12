@@ -10,7 +10,7 @@ const ListBoxItem : React.FC<ListBoxItemProps> = ({label, value, children}) => {
     return (
         <div className="flex flex-col py-2">
             {label && <small>{label}</small>}
-            <span>{value || children}</span> 
+            <span className="text-sm lg:text-md">{value || children}</span> 
         </div>
     )
 }

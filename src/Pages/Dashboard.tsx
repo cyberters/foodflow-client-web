@@ -35,10 +35,18 @@ const Dashboard: React.FC = () => {
                     <div className="col-span-9 md:col-span-2 flex flex-col h-full order-2 md:order-1">
                         <div className="flex flex-col space-y-3">
                             <nav className="bg-primary border border-black grid grid-cols-4 divide-x divide-black rounded-md block lg:hidden">
-                                <div className="flex flex-col space-y-1 items-center justify-between py-2">
-                                    <FontAwesomeIcon icon={faPeopleGroup} className="mx-auto"/>
-                                    <small className="mx-auto">Rodziny</small>
-                                </div>
+                                <NavLink to="/dashboard/families">
+                                    {({ isActive }) => (
+                                        <div
+                                        className={`flex flex-col space-y-1 items-center justify-between py-2 ${
+                                            isActive ? "bg-brand-warm/60" : ""
+                                        }`}
+                                        >
+                                            <FontAwesomeIcon icon={faPeopleGroup} className="mx-auto" />
+                                            <small className="mx-auto">Rodziny</small>
+                                        </div>
+                                    )}
+                                </NavLink>
                                 <div className="flex flex-col space-y-1 items-center justify-between py-2">
                                     <FontAwesomeIcon icon={faListDots} className="mx-auto"/>
                                     <small className="mx-auto">Jadlospisy</small>

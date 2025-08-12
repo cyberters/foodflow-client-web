@@ -38,7 +38,8 @@ const SearchFamily: React.FC = () => {
                 <FontAwesomeIcon icon={faSearch} className="me-auto h-8 text-brand-warm"/>
             </CardHeader>
             <ListBox>
-                <ListBoxItem label="Znajdź grupę">
+                <ListBoxItem label="Znajdź grupę"/>
+                <ListBoxItem>
                     <FindFamilyForm onSubmit={onSubmit}></FindFamilyForm>
                 </ListBoxItem>
             </ListBox>

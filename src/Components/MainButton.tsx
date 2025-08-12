@@ -17,7 +17,7 @@ const MainButton: React.FC<MainButtonProps> = ({
 }) => {
     const isAnchorLink = href.startsWith('#')
 
-    const classNames = `text-md border border-solid border-black transition-all ${
+    const classNames = `text-sm lg:text-md border border-solid border-black transition-all ${
         contrast ? 'bg-primary' : ''
     } hover:bg-brand-warm/60 px-3 py-2 rounded-md flex flex-row space-x-3 items-center`
 

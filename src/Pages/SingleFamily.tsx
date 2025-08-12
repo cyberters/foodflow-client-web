@@ -137,7 +137,7 @@ const SingleFamily: React.FC = () => {
             </CardHeader>
 
             <div className="grid grid-cols-3 gap-4">
-                <div className="col-span-1 space-y-3">
+                <div className="col-span-3 lg:col-span-1 space-y-3">
                     <ListBox>
                         <ListBoxItem label="Wygeneruj jadłospis">
                             <div className="pt-1"></div>
@@ -149,9 +149,9 @@ const SingleFamily: React.FC = () => {
                         </ListBoxItem>}
                     </ListBox>
                 </div>          
-                {(foodLists && foodLists.length > 0) ? <div className="col-span-2">   
+                {(foodLists && foodLists.length > 0) ? <div className="col-span-3 lg:col-span-2">   
                     <FoodListsShow foodLists={foodLists}/>
-                </div> : <div className="col-span-2">
+                </div> : <div className="col-span-3 lg:col-span-2">
                     <ListBox>
                         <ListBoxItem label="Wygeneruj jadłospis">
                             <h6>Nagłówek</h6>
