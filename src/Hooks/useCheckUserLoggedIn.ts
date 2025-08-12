@@ -28,7 +28,7 @@ const useCheckUserLoggedIn = () => {
     }, [])
 
     return {
-        isLoggedIn, loading, error
+        isLoggedIn, loading, error, setIsLoggedIn
     }
 }
 

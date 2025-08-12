@@ -6,7 +6,7 @@ interface DashboardLayoutProps {
 
 const DashboardLayout: React.FC<DashboardLayoutProps> = ({children}) => {
     return (
-        <div className='flex flex-col space-y-3 h-full'>
+        <div className='flex flex-col space-y-3 h-full overflow-hidden'>
             {children}
         </div>
     )

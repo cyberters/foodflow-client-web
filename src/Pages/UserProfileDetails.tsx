@@ -15,7 +15,7 @@ const UserProfileDetails: React.FC = () => {
         <>
             {userData?.userProfile ? <CardHeader title="Panel użytkownika" subtitle="Uzupełnij swoje dane">
                     <FontAwesomeIcon icon={faUserEdit} className="me-auto h-8 text-brand-warm"/>
-                </CardHeader> : <CardHeader title="Witaj w food.flow!" subtitle="Uzupełnij swoje dane">
+                </CardHeader> : <CardHeader title="Witaj w food.flow!" subtitle={userData?.userProfile ? `Hello` : `Uzupełnij swoje dane`}>
                     <FontAwesomeIcon icon={faFaceSmileWink} className="me-auto h-8 text-brand-warm"/>
                 </CardHeader>}
                 {!userData?.userProfile ? <div className="flex flex-col space-y-2">

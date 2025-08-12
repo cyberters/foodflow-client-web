@@ -37,10 +37,10 @@ const Navbar: React.FC = () => {
         )}
         <div className="flex flex-row items-center space-x-4">
           {isLoggedIn ? (
-            <NavbarLink
+            <div className="hidden lg:block"><NavbarLink
               href="/user/details"
               label={`@${userData?.userName}`}
-            />
+            /></div>
           ) : (
             <NavbarLink href="/sign-in" label="Zaloguj się!" />
           )}

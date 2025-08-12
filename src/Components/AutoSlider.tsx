@@ -35,7 +35,7 @@ const AutoSlider: React.FC = () => {
   }, []);
 
   return (
-    <div className="pt-2 overflow-hidden relative w-full mx-auto border border-black rounded-md bg-brand-warm/10 shadow-xl">
+    <div className="pt-2 overflow-hidden relative w-full mx-auto border border-black rounded-md bg-brand-warm/10">
       <div
         className="flex transition-transform duration-500"
         style={{

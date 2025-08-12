@@ -7,7 +7,7 @@ import { spawn } from "child_process";
 import MainButton from "../Components/MainButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAdd, faArrowDown, faArrowRight, faArrowRightFromBracket, faArrowUp, faFaceSmileWink, faGhost, faListDots, faPeopleGroup, faRocket, faSearch, faShoppingBag, faTriangleExclamation, faUser, faWarning } from "@fortawesome/free-solid-svg-icons";
-import { Link, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import Illustration001 from '../Assets/Images/Illustration001.svg'
 import CardHeader from "../Components/CardHeader";
 import CardSection from "../Components/CardSection";
@@ -34,31 +34,39 @@ const Dashboard: React.FC = () => {
                 <div className="grid grid-cols-9 gap-4 md:gap-8 flex-grow h-full">
                     <div className="col-span-9 md:col-span-2 flex flex-col h-full order-2 md:order-1">
                         <div className="flex flex-col space-y-3">
-                            <nav className="bg-primary border border-black grid grid-cols-4 divide-x divide-black rounded-md py-3 block lg:hidden">
-                                <div className="flex flex-col space-y-1 items-center justify-between">
+                            <nav className="bg-primary border border-black grid grid-cols-4 divide-x divide-black rounded-md block lg:hidden">
+                                <div className="flex flex-col space-y-1 items-center justify-between py-2">
                                     <FontAwesomeIcon icon={faPeopleGroup} className="mx-auto"/>
                                     <small className="mx-auto">Rodziny</small>
                                 </div>
-                                <div className="flex flex-col space-y-1 items-center justify-between">
+                                <div className="flex flex-col space-y-1 items-center justify-between py-2">
                                     <FontAwesomeIcon icon={faListDots} className="mx-auto"/>
                                     <small className="mx-auto">Jadlospisy</small>
                                 </div>
-                                <div className="flex flex-col space-y-1 items-center justify-between">
+                                <div className="flex flex-col space-y-1 items-center justify-between py-2">
                                     <FontAwesomeIcon icon={faShoppingBag} className="mx-auto"/>
                                     <small className="mx-auto">Listy zakupów</small>
                                 </div>
-                                <div className="flex flex-col space-y-1 items-center justify-between">
-                                    <FontAwesomeIcon icon={faUser} className="mx-auto"/>
-                                    <small className="mx-auto">Profil</small>
-                                </div>
+                                <NavLink to="/dashboard/user/details">
+                                    {({ isActive }) => (
+                                        <div
+                                        className={`flex flex-col space-y-1 items-center justify-between py-2 ${
+                                            isActive ? "bg-brand-warm/60" : ""
+                                        }`}
+                                        >
+                                            <FontAwesomeIcon icon={faUser} className="mx-auto" />
+                                            <small className="mx-auto">Profil</small>
+                                        </div>
+                                    )}
+                                </NavLink>
                             </nav>
                             <nav className="bg-brand-warm rounded-md px-4 py-3">
                                 <div className="flex items-center justify-between">
                                     <div className="flex flex-col space-y-1">
-                                        <h4 className="text-xl font-bold">food.flow</h4>
+                                        <h4 className="text-lg lg:text-xl font-bold">food.flow</h4>
                                     </div>
-                                    <div className="ps-4 my-auto flex bg-primary border border-solid border-black transition-all px-3 py-2 rounded-md">
-                                        <FontAwesomeIcon icon={faArrowRightFromBracket} className="w-5 h-5 text-black my-auto" onClick={Logout}></FontAwesomeIcon>
+                                    <div className="lg:ps-4 my-auto flex bg-primary border border-solid border-black transition-all px-3 py-2 rounded-md">
+                                        <FontAwesomeIcon icon={faArrowRightFromBracket} className="w-4 h-4 lg:w-5 lg:h-5 text-black my-auto" onClick={Logout}></FontAwesomeIcon>
                                     </div>
                                 </div>
                             </nav>
