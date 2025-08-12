@@ -33,18 +33,20 @@ const CreateFamily: React.FC = () => {
             <CardHeader title="Stwórz swoją grupę" subtitle="Rodzina">
                 <FontAwesomeIcon icon={faFile} className="me-auto h-8 text-brand-warm"/>
             </CardHeader>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 <ListBox>
-                    <ListBoxItem label="Dodaj grupę">
+                    <ListBoxItem label="Dodaj grupę"/>
+                    <ListBoxItem>
                         <div className="pt-1"></div>
                         <CreateFamilyForm onSubmit={onSubmit}/>
                     </ListBoxItem>
                 </ListBox>
                 <ListBox>
-                    <ListBoxItem label="Dodaj grupę">
+                    <ListBoxItem label="Dodaj grupę"/>
+                    <ListBoxItem>
                         <h6 className="text-lg">Zaplanuj posiłki razem z domownikami – wszystko w jednym miejscu!</h6>
-                        <div className="grid grid-cols-3 gap-4">
-                            <div className="text-sm col-span-2">
+                        <div className="grid grid-cols-3 gap-2 lg:gap-4">
+                            <div className="text-sm col-span-3 lg:col-span-2">
                                 <p>
                                     Zorganizuj swoje gospodarstwo domowe w jednym miejscu!
                                 <br /><br />
@@ -69,8 +71,8 @@ const CreateFamily: React.FC = () => {
                                 </li>
                                 </ul>
                             </div>
-                            <div className="col-span-1 flex items-center justify-center">
-                                <img src={foodFlow003} alt="" className="max-w-full h-auto object-contain" />
+                            <div className="col-span-3 lg:col-span-1 flex items-center justify-center">
+                                <img src={foodFlow003} alt="" className="h-[20vh] lg:h-[30vh] object-contain" />
                             </div>
                         </div>
                     </ListBoxItem>
