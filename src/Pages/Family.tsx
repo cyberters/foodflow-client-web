@@ -9,6 +9,7 @@ import ListBox from '../Components/ListBox'
 import { Link } from 'react-router-dom'
 import ListBoxItem from '../Components/ListBoxItem'
 import MainButton from '../Components/MainButton'
+import { FormatTimeStamp } from '../Services/FormatTimeStamp'
 
 const Family: React.FC = () => {
     const { families, loading, error } = useLoadFamilies()
@@ -22,7 +23,16 @@ const Family: React.FC = () => {
                     <ListBox>
                         {families.length > 0 ? families.map((item) => (
                             <Link to={`/dashboard/family/${item.familyId}`} className="hover:bg-primary rounded-md transition-all hover:px-3 flex flex-row">
-                                <ListBoxItem value={item.familyName} key={item.familyId}/>
+                                <ListBoxItem value={item.familyName} key={item.familyId}>
+                                    <div className="flex flex-row gap-3">
+                                        <span className="text-xs lg:text-md">
+                                            Członkowie: {item.familyMembers?.length}
+                                        </span>
+                                         <span className="text-xs lg:text-md">
+                                            Utworzono: {FormatTimeStamp(item.familyCreatedAt)}
+                                        </span>
+                                    </div>
+                                </ListBoxItem>
                                 <FontAwesomeIcon icon={faListDots} className="ms-auto my-auto"/>
                             </Link>
                         )) : <ListBoxItem label="Pusta lista">

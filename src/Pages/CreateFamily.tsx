@@ -71,8 +71,8 @@ const CreateFamily: React.FC = () => {
                                 </li>
                                 </ul>
                             </div>
-                            <div className="col-span-3 lg:col-span-1 flex items-center justify-center">
-                                <img src={foodFlow003} alt="" className="h-[20vh] lg:h-[30vh] object-contain" />
+                            <div className="col-span-3 lg:col-span-1 flex items-center justify-center overflow-hidden">
+                                <img src={foodFlow003} alt="" className="h-[20vh] lg:h-[30vh] object-contain animate-slide-right-to-left" />
                             </div>
                         </div>
                     </ListBoxItem>

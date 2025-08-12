@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import CardHeader from "../Components/CardHeader"
-import { faListDots, faSearch } from "@fortawesome/free-solid-svg-icons"
+import { faCircle, faListDots, faSearch } from "@fortawesome/free-solid-svg-icons"
 import ListBox from "../Components/ListBox"
 import ListBoxItem from "../Components/ListBoxItem"
 import { useState } from "react"
@@ -9,6 +9,8 @@ import FindFamilyForm from "../Components/FindFamilyForm"
 import { FamiliesProps } from "../Models/FamiliesProps"
 import { FormatTimeStamp } from "../Services/FormatTimeStamp"
 import LinkBoxItem from "../Components/LinkBoxItem"
+import AnimateBounceHead from "../Components/AnimateBounceHead"
+import Loading from "../Components/Loading"
 
 const SearchFamily: React.FC = () => {
     const [families, setFamilies] = useState<FamiliesProps[]>()
@@ -43,18 +45,20 @@ const SearchFamily: React.FC = () => {
                     <FindFamilyForm onSubmit={onSubmit}></FindFamilyForm>
                 </ListBoxItem>
             </ListBox>
+            {loading && <Loading/>}
             {(families && families.length > 0) && 
-            <ListBox>
-                {families.map((item) => (
-                    <LinkBoxItem linkHref={`/dashboard/family/${item.familyId}`}>
-                        <ListBoxItem label={`Liczba członków: ${item.familyCount}`} key={item.familyId}>
-                            <div>{item.familyName}</div>
-                            <small>Utworzono: {FormatTimeStamp(item.familyCreatedAt)}</small>
-                        </ListBoxItem>
-                        <FontAwesomeIcon icon={faListDots} className="ms-auto my-auto"/>
-                    </LinkBoxItem>
-                ))}
-            </ListBox>}
+                <ListBox>
+                    {families.map((item) => (
+                        <LinkBoxItem linkHref={`/dashboard/family/${item.familyId}`}>
+                            <ListBoxItem label={`Liczba członków: ${item.familyCount}`} key={item.familyId}>
+                                <div>{item.familyName}</div>
+                                <small>Utworzono: {FormatTimeStamp(item.familyCreatedAt)}</small>
+                            </ListBoxItem>
+                            <FontAwesomeIcon icon={faListDots} className="ms-auto my-auto"/>
+                        </LinkBoxItem>
+                    ))}
+                </ListBox>
+            }
         </div>
     )
 }

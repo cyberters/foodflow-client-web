@@ -31,8 +31,8 @@ const Dashboard: React.FC = () => {
     return (
         <MainLayout>
             <DashboardLayout>
-                <div className="grid grid-cols-9 gap-4 md:gap-8 flex-grow h-full">
-                    <div className="col-span-9 md:col-span-2 flex flex-col h-full order-2 md:order-1">
+                <div className="flex flex-col md:grid md:grid-cols-9 gap-4 md:gap-8 flex-grow h-full">
+                    <div className="col-span-9 md:col-span-2 flex flex-col order-2 md:order-1">
                         <div className="flex flex-col space-y-3">
                             <nav className="bg-primary border border-black grid grid-cols-4 divide-x divide-black rounded-md block lg:hidden">
                                 <NavLink to="/dashboard/families">
@@ -158,15 +158,15 @@ const Dashboard: React.FC = () => {
                                 </div>    
                             </div>}
                         </div>
-                        <div className="py-8 md:flex mx-auto hidden">
+                        {/* <div className="py-8 md:flex mx-auto hidden">
                             <img src={Illustration001} alt="Girl with Shopping Bag and Logo" srcSet="" className='mx-auto h-[13rem]'/>
-                        </div>
+                        </div> */}
                         </div>
                         <div className="hidden md:flex mt-auto">
                             <Footer></Footer>
                         </div>
                     </div>
-                    <div className="order-1 md:order-2 col-span-9 md:col-span-7 border border-black border-solid bg-primary rounded-md px-4 py-3 flex flex-col gap-4 flex-grow overflow-y-scroll h-full">
+                    <div className="order-1 md:order-2 col-span-9 md:col-span-7 border border-black border-solid bg-primary rounded-md px-4 py-3 flex flex-col gap-4 overflow-y-scroll h-full">
                         <Breadcrumbs />
                         <Outlet/>
                     </div>

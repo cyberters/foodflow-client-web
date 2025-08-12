@@ -77,8 +77,21 @@ td {
   }
 }
 
+@keyframes slideRightToLeft {
+  0% {
+    transform: translateX(150%);
+  }
+  100% {
+    transform: translateX(-300%);
+  }
+}
+
 .animate-slide-left-to-right {
   animation: slideLeftToRight 10s linear infinite;
+}
+
+.animate-slide-right-to-left {
+  animation: slideRightToLeft 10s linear infinite;
 }
 
 .animate-slide-x {

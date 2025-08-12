@@ -23,12 +23,13 @@ const FindFamilyForm : React.FC<OnSubmitProps> = ({ onSubmit }) => {
     return (
         <FormLayout onSubmit={handleSubmit(onSubmit)}>
             <div className="flex flex-col space-y-1">
-                <FormInput placeholder="Podaj nazwę..." {...register("familyName", { required: true })}/>
+                <label className="block mb-1 text-xs lg:text-sm font-medium text-gray-700" htmlFor="FamilyName">Nazwa</label>
+                <FormInput {...register("familyName", { required: true })}/>
                 {errors.familyName && <AlertBadge label='To pole jest wymagane'/>}
             </div>
             <button
                 type="submit"
-                className="me-auto bg-brand-normal text-white py-2 px-4 rounded-md hover:bg-brand-warm transition text-sm"
+                className="me-auto bg-brand-normal text-white py-2 px-4 rounded-md hover:bg-brand-warm transition text-xs lg:text-sm"
             >
                 Zapisz
             </button>

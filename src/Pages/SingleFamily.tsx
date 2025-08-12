@@ -17,6 +17,7 @@ import FoodListCreateForm from "../Components/FoodListCreateForm";
 import useFoodLists from "../Hooks/useFoodLists";
 import LinkBoxItem from "../Components/LinkBoxItem";
 import FoodListsShow from "../Components/FoodListsShow";
+import Loading from "../Components/Loading";
 
 const SingleFamily: React.FC = () => {
     const { id } = useParams<{ id: string }>();
@@ -120,7 +121,7 @@ const SingleFamily: React.FC = () => {
     }
 
     if (loading) {
-        return <div className="text-gray-600">Ładowanie danych...</div>;
+        return <Loading/>
     }
 
     if (error || !familyData) {
