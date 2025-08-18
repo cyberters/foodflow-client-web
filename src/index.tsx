@@ -100,26 +100,22 @@ const router_guest = createBrowserRouter([
     element: <Home/>,
     index: true
   },
-  {
-    path: '/about',
-    element: <About/>
-  },
-  {
-    path: '/family',
-    element: <Family/>
-  },
+  // {
+  //   path: '/about',
+  //   element: <About/>
+  // },
   {
     path: '/demo',
     element: <Demo/>
   },
-  {
-    path: '/sign-in',
-    element: <LoginPage/>
-  },
-  {
-    path: '/sign-up',
-    element: <RegisterPage/>
-  },
+  // {
+  //   path: '/sign-in',
+  //   element: <LoginPage/>
+  // },
+  // {
+  //   path: '/sign-up',
+  //   element: <RegisterPage/>
+  // },
   {
     path: '*',
     element: <NotFound/>

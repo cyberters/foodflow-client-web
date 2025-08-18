@@ -1,3 +1,4 @@
+import { FileRecord } from "./FileRecord"
 import { UserProfileProps } from "./UserProfileProps"
 
 export interface UserData
@@ -7,4 +8,5 @@ export interface UserData
     userEmail: string
     createdAt: string
     userProfile?: UserProfileProps
+    fileRecord?: FileRecord
 }

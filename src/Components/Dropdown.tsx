@@ -8,11 +8,11 @@ const faqItems = [
     answer:
       "Nasza aplikacja pomaga planować zakupy i organizować listy zakupowe w oparciu o Twoje preferencje i potrzeby. Dzięki niej łatwiej zaplanujesz posiłki, unikniesz niepotrzebnych zakupów i ograniczysz marnowanie jedzenia."
   },
-  {
-    question: "Czy aplikacja jest darmowa?",
-    answer:
-      "Tak! Podstawowe funkcje planowania zakupów i tworzenia list są całkowicie darmowe. W przyszłości planujemy wprowadzić dodatkowe opcje premium, ale podstawowa wersja pozostanie bezpłatna."
-  },
+  // {
+  //   question: "Czy aplikacja jest darmowa?",
+  //   answer:
+  //     "Tak! Podstawowe funkcje planowania zakupów i tworzenia list są całkowicie darmowe. W przyszłości planujemy wprowadzić dodatkowe opcje premium, ale podstawowa wersja pozostanie bezpłatna."
+  // },
   {
     question: "Czy mogę synchronizować listy zakupów z innymi członkami rodziny?",
     answer:
@@ -24,9 +24,9 @@ const faqItems = [
       "Nasza aplikacja powstaje we współpracy z doświadczonymi dietetykami i ekspertami ds. żywienia, którzy z pasją i precyzją tworzą kompleksową, profesjonalną bazę wiedzy. To właśnie ona stanowi fundament działania aplikacji, zapewniając użytkownikom dostęp do rzetelnych, aktualnych i praktycznych informacji, które wspierają zdrowe i świadome wybory żywieniowe. Podczas, gdy ChatGPT gromadzi dane o wszystkim i o niczym, my chcemy się doskonalić w tym jednym obszarze, jakim jest zdrowe żywienie!"
   },
   {
-    question: "Jak mogę zgłosić sugestię lub problem?",
+    question: "Czy aplikacja uwzględnia to, co mam aktualnie w lodówce?",
     answer:
-      "Najlepiej skontaktować się z nami przez formularz kontaktowy na stronie, Slacka lub bezpośrednio w aplikacji w sekcji „Opinie”. Każda sugestia jest dla nas cenna i pomaga rozwijać aplikację."
+      "Tak, aplikacja dopasuje przepisy do tego, co masz pod ręką. Zaproponujemy tylko najpotrzebniejsze zakupy!"
   }
 ]
 

@@ -8,6 +8,7 @@ import ListBox from "../Components/ListBox"
 import ListBoxItem from "../Components/ListBoxItem"
 import User from "../Assets/Images/UserExample.jpg";
 import AnimateBounceHead from "../Components/AnimateBounceHead"
+import AvatarUploader from "../Components/AvatarUploader"
 
 const UserProfileDetails: React.FC = () => {
     const { userData, loading, error } = useAuthUser()
@@ -58,10 +59,7 @@ const UserProfileDetails: React.FC = () => {
                 </div> : 
                 <div className="grid grid-cols-5 gap-4">
                     <div className="col-span-5 lg:col-span-1 flex justify-center">
-                        <div
-                            className="w-[27vh] h-[27vh] rounded-full border border-black bg-center bg-cover"
-                            style={{ backgroundImage: `url(${User})` }}
-                        />
+                        <AvatarUploader initialImage={userData?.fileRecord ? userData?.fileRecord.filePath : User}/>
                     </div>
                     <div className="col-span-5 lg:col-span-2 flex flex-col space-y-4">
                         <ListBox>

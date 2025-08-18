@@ -20,7 +20,7 @@ const useLoadFamilies = () =>  {
         };
 
         fetchToken();
-    }, [families])
+    }, [])
 
     return { families, loading, error };
 }

@@ -15,11 +15,11 @@ const Navbar: React.FC = () => {
 
   const loggedInLinks = [{ href: "/dashboard", label: "Dashboard" }];
   const loggedOutLinks = [
-    { href: "/about", label: "O nas" },
-    { href: "/demo", label: "Sprawdź demo!" }
+    // { href: "/about", label: "O nas" },
+    // { href: "/demo", label: "Sprawdź demo!" }
   ];
 
-  const menuLinks = isLoggedIn ? loggedInLinks : loggedOutLinks;
+  const menuLinks = isLoggedIn ? loggedInLinks : null;
 
   return (
     <nav className="bg-brand-warm rounded-md px-4 py-3">
@@ -28,14 +28,14 @@ const Navbar: React.FC = () => {
           <h4 className="text-xl font-bold">food.flow</h4>
           <Breadcrumbs />
         </div>
-        {!loading && (
-          <div className="hidden lg:flex flex-row space-x-6 mx-auto">
+        {/* {!loading && (
+          <div className="hidden lg:flex flex-row space-x-4 ms-auto">
             {menuLinks.map((link) => (
               <NavbarLink key={link.href} href={link.href} label={link.label} />
             ))}
           </div>
-        )}
-        <div className="flex flex-row items-center space-x-4">
+        )} */}
+        {/* <div className="flex flex-row items-center space-x-4">
           {isLoggedIn ? (
             <div className="hidden lg:block"><NavbarLink
               href="/user/details"
@@ -56,9 +56,9 @@ const Navbar: React.FC = () => {
           >
             {isOpen ? <FontAwesomeIcon icon={faClose} /> : <FontAwesomeIcon icon={faNavicon} />}
           </button>
-        </div>
+        </div> */}
       </div>
-      <div
+      {/* <div
         className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
           isOpen ? "max-h-96 mt-4" : "max-h-0"
         }`}
@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
             <NavbarLink key={link.href} href={link.href} label={link.label} />
           ))}
         </div>
-      </div>
+      </div> */}
     </nav>
   );
 };

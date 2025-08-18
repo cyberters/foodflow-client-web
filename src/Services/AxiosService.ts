@@ -4,7 +4,7 @@ const LOCAL_URL = `http://localhost:5179`
 const PROD_URL = `https://foodflowapi-h9bngtcucacsddc2.polandcentral-01.azurewebsites.net`
 
 const AxiosService = axios.create({
-    baseURL: `${PROD_URL}/api`,
+    baseURL: `${LOCAL_URL}/api`,
     withCredentials: true,
     headers: {
         'Content-Type': 'application/json'
