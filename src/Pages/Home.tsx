@@ -3,7 +3,7 @@ import MainLayout from '../Layouts/MainLayout'
 import PageLayout from '../Layouts/PageLayout'
 import CardsBox from '../Components/CardsBox'
 import Illustration001 from '../Assets/Images/Illustration001.svg'
-import Illustration002 from '../Assets/Images/Illustration002.svg'
+import Illustration002 from '../Assets/Images/foodflow005.png'
 import ShoppingFamily from '../Assets/Images/ShoppingFamily.jpg'
 import Cooking from '../Assets/Images/Cooking.jpg'
 import CardItem from '../Components/CardItem'
@@ -21,9 +21,9 @@ const Home: React.FC = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-8 lg:py-16 px-3 lg:px-4 lg:h-[70vh]">
                     <div className="flex">
                         <div className='flex flex-col space-y-5 my-auto'>
-                            <h4 className='text-xl bg-brand-warm px-3 py-2 rounded-md me-auto animate-bounce-slow'>Hello!</h4>
-                            <h2 className='text-4xl'>Witaj w food.flow!</h2>
-                            <p className='w-3/5'>Planuj szybciej, kupuj rozsądniej i nigdy nie zapomnij, co trzeba kupić.
+                            <h4 className='text-xl bg-brand-warm px-3 py-2 rounded-md me-auto animate-bounce-slow'>Witaj w food.flow!</h4>
+                            <h2 className='text-4xl'>Nadajemy rytm Twoim zakupom!</h2>
+                            <p className='w-4/5 lg:w-3/5'>Planuj szybciej, kupuj rozsądniej i nigdy nie zapomnij, co trzeba kupić.
     Z nami zakupy stają się prostsze, tańsze i lepiej zorganizowane.
     Wszystko, czego potrzebujesz – zawsze pod ręką.</p>
                             <div className="flex flex-row space-x-4">

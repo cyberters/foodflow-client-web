@@ -18,6 +18,10 @@ const Demo: React.FC = () => {
                             <CardItem intro='Demo' header='Już niedługo pierwsze MVP!' desc='Cześć! Zapraszamy Cię do odkrycia, jak działa nasza aplikacja.
 Sprawdź, jak łatwo możesz planować zdrowe posiłki i cieszyć się gotowaniem — wszystko w jednym miejscu.
 Gotowy na smakowitą przygodę? Zapraszamy na premierę z początkiem września 2025!' background={false}/>
+                            <div className="border border-solid border-black me-auto rounded-md px-3 py-2 flex flex-col space-y-">
+                                <small>Premiera</small>
+                                <h6 className='text-xl'>wrzesień 2025</h6>
+                            </div>
                             {/* <div className="flex flex-row space-x-4">
                                 <MainButton label='Zaloguj się' href='/sign-in'>
                                     <FontAwesomeIcon icon={faUser}/>
